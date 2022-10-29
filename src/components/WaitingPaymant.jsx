@@ -201,7 +201,7 @@ export const WaitingPayment = () => {
         {finana.state !== 'paid' &&
           <div className="cardInfo">Переводите точную сумму ОДНИМ ПЕРЕВОДОМ, или он не будет зачислен!!!</div>}
       </div>}
-      {timer < 0 && finana.state === 'waiting_payment' &&
+      {timer < 0 && (finana.state === 'waiting_payment' || finana.state === 'paid') &&
         <div className='WaitingPaymentTimeOut'>
           <div className="WaitingPaymentTimeOut__title">
             <img src={logo} alt=""/>
