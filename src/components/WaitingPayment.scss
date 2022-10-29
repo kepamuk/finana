@@ -1,0 +1,665 @@
+.WaitingPaymentWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.WaitingPayment {
+  width: 750px;
+  height: 855px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.WaitingPayment__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 26px 40px 50px 40px;
+}
+
+.WaitingPayment__title img:last-child {
+  cursor: pointer;
+}
+
+.WaitingPayment__title img:last-child {
+  width: 50px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card__title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #323B4B;
+}
+
+.card__info {
+  font-size: 19px;
+  color: #8A94A6;
+  margin-top: 10px;
+}
+
+.cardBlock__bottom {
+  margin-top: 29px;
+}
+
+.number {
+  text-align: left;
+}
+
+.number__title {
+  font-size: 17px;
+}
+
+.number__block {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.number__block--number {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.copy {
+  margin-top: -6px;
+  position: relative;
+}
+
+.copy__text {
+  color: #2787F5;
+  font-size: 12px;
+  background: #E6F0FF;
+  border-radius: 6px;
+  position: absolute;
+  right: 0;
+  top: -30px;
+  padding: 4px;
+  opacity: 0;
+}
+
+.copy__text-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #E6F0FF;
+  position: absolute;
+  bottom: -6px;
+  right: 12px;
+}
+
+.copy__img {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff7d;
+  border-radius: 7px;
+  opacity: .6;
+  transition: opacity .4s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.number-sum {
+  margin-top: 20px;
+}
+
+.cardBottom {
+  margin-top: 60px;
+}
+
+.cardBottom__timer {
+  font-size: 33px;
+  color: #323b4b;
+  margin-bottom: 20px;
+}
+
+.cardBottom__info {
+  color: #ff5630;
+  font-size: 15px;
+}
+
+.cardBottom__send {
+  font-size: 15px;
+}
+
+.cardBottom__send span:first-child {
+  color: #8A94A6;
+}
+
+.cardBottom__send span:last-child {
+  color: #2787f5;
+}
+
+.cardBottom__btn {
+  display: inline-block;
+  text-align: center;
+  padding: 18px 38px;
+  background-color: #2787f5;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  width: 460px;
+  margin-top: 25px;
+}
+
+.cardInfo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  padding: 30px 0;
+  color: #fff;
+  background-color: #FF5630;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  height: 78px;
+}
+
+.WaitingPaymentTimeOut {
+  width: 750px;
+  height: 855px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.WaitingPaymentTimeOut__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 26px 40px 50px 40px;
+}
+
+.WaitingPaymentTimeOut__content {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.WaitingPaymentTimeOut__content h2 {
+  color: #323B4B;
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+.WaitingPaymentTimeOut__content div {
+  color: #8A94A6;
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.WaitingPaymentTimeOut__content button {
+  background: #EAF4FF;
+  border-radius: 15px;
+  color: #2787F5;
+  border: none;
+  cursor: pointer;
+  width: 280px;
+  height: 50px;
+  margin-top: 46px;
+  font-size: 16px;
+}
+
+.WaitingPaymentTimeOut__bottom {
+  color: #2787F5;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 0;
+  animation: fadeIn 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  border: 6px transparent solid;
+  border-top: 6px #2787f5 solid;
+  border-right: 6px #2787f5 solid;
+  border-bottom: 6px #2787f5 solid;
+  border-radius: 50%;
+  -webkit-animation: p2p-spinner 1.2s infinite linear;
+  animation: p2p-spinner 1.2s infinite linear;
+}
+
+@-webkit-keyframes p2p-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes p2p-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.cardBottom__wrap {
+
+}
+
+.paid {
+  text-align: center;
+}
+
+.paid p {
+  color: #8A94A6;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.paid .spinner {
+  margin: 0 auto;
+}
+
+.paid__search {
+  font-size: 16px;
+  color: #19191A;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.modal__wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 20%);
+}
+
+.modal {
+  width: 340px;
+  height: 340px;
+  padding: 40px 30px;
+  max-width: 95%;
+  z-index: 30;
+  box-shadow: 0 3px 20px -0.5px rgb(16 33 64 / 8%);
+  background-color: #ffffff;
+  transition: 0.3s all;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.modal h3 {
+  margin: 0;
+}
+
+.modal img {
+  width: 50px;
+  margin-top: 30px;
+}
+
+.modal__text {
+  font-size: 18px;
+  color: #8A94A6;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.modal__btn {
+  display: inline-block;
+  text-align: center;
+  padding: 18px 38px;
+  background-color: #2787f5;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+  transition: background-color .3s ease-in-out;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.modal__cancel {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #2787f5;
+  cursor: pointer;
+}
+
+.cardBlockWrap {
+  width: 455px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cardBlock {
+  position: relative;
+  width: 455px;
+  height: 270px;
+  margin: 30px auto 0;
+  color: #fff;
+  padding: 25px 30px 30px;
+  border-radius: 33px;
+  z-index: 10;
+  background: linear-gradient(110.65deg, #5BA7FF 3.15%, #1F7BE4 98.28%);
+  box-shadow: 0px 15px 48px rgba(60, 144, 241, 0.4);
+}
+
+.cardBlock__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardBlock__top-logo {
+  height: 24px;
+  max-width: 120px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cardBlock__top-payment {
+  height: 20px;
+  max-width: 60px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mir .cardBlock__top-payment{
+  background-image: url(../img/payments/mir.svg);
+}
+
+.maestro .cardBlock__top-payment{
+  background-image: url(../img/payments/maestro.svg);
+}
+
+.mastercard .cardBlock__top-payment{
+  background-image: url(../img/payments/mastercard.svg);
+}
+
+.visa .cardBlock__top-payment{
+  background-image: url(../img/payments/visa.svg);
+}
+
+.cardBlockFon {
+  background-color: #1F7BE4;
+  top: 15px;
+  width: 90%;
+  position: absolute;
+  height: 100%;
+  opacity: .2;
+  border-radius: 23px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.cardBlockFon1 {
+  background-color: #1F7BE4;
+  top: 30px;
+  width: 80%;
+  position: absolute;
+  height: 100%;
+  opacity: .2;
+  border-radius: 23px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+/* Sber  */
+.Sberbank .cardBlock {
+  background: linear-gradient(110.65deg, #7CC039 0%, #21A038 100%);
+  box-shadow: 0 15px 48px rgb(33 160 56 / 40%);
+}
+
+.Sberbank .cardBlockFon,
+.Sberbank .cardBlockFon1 {
+  background-color: #21A038;
+}
+
+.Sberbank .cardBlock__top-logo {
+  background-image: url('../img/banks/sber.svg');
+}
+
+/* Tinkoff  */
+
+.Tinkoff .cardBlock {
+  background: linear-gradient(110.65deg, #F1CE18 0%, #FFB500 100%);
+  box-shadow: 0px 15px 48px rgb(255 181 0 / 40%);
+}
+
+.Tinkoff .cardBlockFon,
+.Tinkoff .cardBlockFon1 {
+  background-color: #FFB500;
+}
+
+.Tinkoff .cardBlock__top-logo {
+  background-image: url('../img/banks/tinkoff.svg');
+}
+
+/* Otkritie */
+.Otkritie .cardBlock {
+  background: linear-gradient(110.65deg, #00bef0 0%, #658abf 100%);
+  box-shadow: 0px 15px 48px rgb(51 163 215 / 40%);
+}
+.Otkritie .cardBlockFon,
+.Otkritie .cardBlockFon1 {
+  background-color: #658abf;
+}
+
+.Otkritie .cardBlock__top-logo {
+  background-image: url('../img/banks/otkritie.svg');
+}
+
+/* Alfa */
+
+.Alfa .cardBlock {
+  background: linear-gradient(110.65deg, #ff5e52 0%, #d12221 100%);
+  box-shadow: 0px 15px 48px rgb(255 87 75 / 40%);
+}
+
+.Alfa .cardBlockFon,
+.Alfa .cardBlockFon1 {
+  background-color: #FD2A29;
+}
+
+.Alfa .cardBlock__top-logo {
+  background-image: url('../img/banks/alfa.svg');
+}
+
+/* Qiwi */
+
+.Qiwi .cardBlock {
+  background: linear-gradient(110.65deg, #FF9741 0%, #FF7925 100%);
+  box-shadow: 0px 15px 48px rgb(255 138 42 / 40%);
+}
+
+.Qiwi .cardBlockFon,
+.Qiwi .cardBlockFon1 {
+  background-color: #FF7925;
+}
+
+.Qiwi .cardBlock__top-logo {
+  background-image: url('../img/banks/qiwi.svg');
+}
+
+/* VTB */
+
+.VTB .cardBlock {
+  background: linear-gradient(110.65deg, #007BF8 0%, #1235F7 100%);
+  box-shadow: 0px 15px 48px rgb(0 123 248 / 40%);
+}
+
+.VTB .cardBlockFon,
+.VTB .cardBlockFon1 {
+  background-color: #1235F7;
+}
+
+.VTB .cardBlock__top-logo {
+  background-image: url('../img/banks/vtb.svg');
+}
+
+/* MTS */
+
+.MTS .cardBlock {
+  background: linear-gradient(110.65deg, #fd3826 0%, #b5362a 100%);
+  box-shadow: 0px 15px 48px rgb(218 55 40 / 40%);
+}
+
+.MTS .cardBlockFon,
+.MTS .cardBlockFon1 {
+  background-color: #b5362a;
+}
+
+.MTS .cardBlock__top-logo {
+  background-image: url('../img/banks/mts.svg');
+}
+
+/* MKB */
+
+.MKB .cardBlock {
+  background: linear-gradient(110.65deg, #d63151 0%, #dd0a34 100%);
+  box-shadow: 0px 15px 48px rgb(217 30 67 / 40%);
+}
+
+.MKB .cardBlockFon,
+.MKB .cardBlockFon1 {
+  background-color: #dd0a34;
+}
+
+.MKB .cardBlock__top-logo {
+  background-image: url('../img/banks/mkb.svg');
+}
+
+/* Raiffeisen */
+
+.Raiffeisen .cardBlock {
+  background: linear-gradient(110.65deg, #eecf2d 0%, #ff964d 100%);
+  box-shadow: 0px 15px 48px rgb(247 178 61 / 40%);
+}
+
+.Raiffeisen .cardBlockFon,
+.Raiffeisen .cardBlockFon1 {
+  background-color: #ff964d;
+}
+
+.Raiffeisen .cardBlock__top-logo {
+  background-image: url('../img/banks/raiffeisen.svg');
+}
+
+/* PSB */
+
+.PSB .cardBlock {
+  background: linear-gradient(110.65deg, #ff7a3d 0%, #4849af 100%);
+  box-shadow: 0 15px 48px rgb(165 98 117 / 40%);
+}
+
+.PSB .cardBlockFon,
+.PSB .cardBlockFon1 {
+  background-color: #658abf;
+}
+
+.PSB .cardBlock__top-logo {
+  background-image: url('../img/banks/psb.svg');
+}
+
+/* Rosbank */
+
+.Rosbank .cardBlock {
+  background: linear-gradient(110.65deg, #ee4e4e 0%, #c11b37 100%);
+  box-shadow: 0 15px 48px rgb(215 52 66 / 40%);
+}
+
+.Rosbank .cardBlockFon,
+.Rosbank .cardBlockFon1 {
+  background-color: #658abf;
+}
+
+.Rosbank .cardBlock__top-logo {
+  background-image: url('../img/banks/rosbank.svg');
+}
+
+/* Rocketbank */
+
+.Rocketbank .cardBlock__top-logo {
+  background-image: url('../img/banks/rocketbank.svg');
+}
+
+/* Home Credit */
+
+.Homecredit .cardBlock__top-logo {
+  background-image: url('../img/banks/homecredit.svg');
+}
+
+/* round bank */
+
+.Roundbank .cardBlock__top-logo {
+  background-image: url('../img/banks/roundbank.svg');
+}
+
+/* SPB bank */
+
+.SPB .cardBlock__top-logo {
+  background-image: url('../img/banks/saintpetersburgbank.svg');
+}
+
+/* Uralsib */
+
+.Uralsib .cardBlock__top-logo {
+  background-image: url('../img/banks/uralsib.svg');
+}
