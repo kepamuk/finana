@@ -1,11 +1,11 @@
-.WaitingPaymentWrap {
+.waiting-payment-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-.WaitingPayment {
+.waiting-payment {
   width: 750px;
   height: 855px;
   background-color: #fff;
@@ -13,18 +13,18 @@
   position: relative;
 }
 
-.WaitingPayment__title {
+.waiting-payment__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 26px 40px 50px 40px;
 }
 
-.WaitingPayment__title img:last-child {
+.waiting-payment__title img:last-child {
   cursor: pointer;
 }
 
-.WaitingPayment__title img:last-child {
+.waiting-payment__title img:last-child {
   width: 50px;
 }
 
@@ -44,7 +44,7 @@
   margin-top: 10px;
 }
 
-.cardBlock__bottom {
+.card-block__bottom {
   margin-top: 29px;
 }
 
@@ -114,34 +114,34 @@
   margin-top: 20px;
 }
 
-.cardBottom {
+.card-bottom {
   margin-top: 60px;
 }
 
-.cardBottom__timer {
+.card-bottom__timer {
   font-size: 33px;
   color: #323b4b;
   margin-bottom: 20px;
 }
 
-.cardBottom__info {
+.card-bottom__info {
   color: #ff5630;
   font-size: 15px;
 }
 
-.cardBottom__send {
+.card-bottom__send {
   font-size: 15px;
 }
 
-.cardBottom__send span:first-child {
+.card-bottom__send span:first-child {
   color: #8A94A6;
 }
 
-.cardBottom__send span:last-child {
+.card-bottom__send span:last-child {
   color: #2787f5;
 }
 
-.cardBottom__btn {
+.card-bottom__btn {
   display: inline-block;
   text-align: center;
   padding: 18px 38px;
@@ -158,7 +158,7 @@
   margin-top: 25px;
 }
 
-.cardInfo {
+.card-info {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -175,7 +175,7 @@
   height: 78px;
 }
 
-.WaitingPaymentTimeOut {
+.waiting-payment-timeout {
   width: 750px;
   height: 855px;
   background-color: #fff;
@@ -183,31 +183,31 @@
   position: relative;
 }
 
-.WaitingPaymentTimeOut__title {
+.waiting-payment-timeout__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 26px 40px 50px 40px;
 }
 
-.WaitingPaymentTimeOut__content {
+.waiting-payment-timeout__content {
   text-align: center;
   margin-top: 200px;
 }
 
-.WaitingPaymentTimeOut__content h2 {
+.waiting-payment-timeout__content h2 {
   color: #323B4B;
   font-size: 26px;
   margin-top: 30px;
 }
 
-.WaitingPaymentTimeOut__content div {
+.waiting-payment-timeout__content div {
   color: #8A94A6;
   font-size: 18px;
   margin-top: 12px;
 }
 
-.WaitingPaymentTimeOut__content button {
+.waiting-payment-timeout__content button {
   background: #EAF4FF;
   border-radius: 15px;
   color: #2787F5;
@@ -219,7 +219,7 @@
   font-size: 16px;
 }
 
-.WaitingPaymentTimeOut__bottom {
+.waiting-payment-timeout__bottom {
   color: #2787F5;
   font-size: 16px;
   position: absolute;
@@ -283,10 +283,6 @@
   to {
     transform: rotate(359deg);
   }
-}
-
-.cardBottom__wrap {
-
 }
 
 .paid {
@@ -378,13 +374,13 @@
   cursor: pointer;
 }
 
-.cardBlockWrap {
+.card-block-wrap {
   width: 455px;
   margin: 0 auto;
   position: relative;
 }
 
-.cardBlock {
+.card-block {
   position: relative;
   width: 455px;
   height: 270px;
@@ -394,16 +390,16 @@
   border-radius: 33px;
   z-index: 10;
   background: linear-gradient(110.65deg, #5BA7FF 3.15%, #1F7BE4 98.28%);
-  box-shadow: 0px 15px 48px rgba(60, 144, 241, 0.4);
+  box-shadow: 0 15px 48px rgba(60, 144, 241, 0.4);
 }
 
-.cardBlock__top {
+.card-block__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.cardBlock__top-logo {
+.card-block__top-logo {
   height: 24px;
   max-width: 120px;
   width: 100%;
@@ -411,7 +407,7 @@
   background-repeat: no-repeat;
 }
 
-.cardBlock__top-payment {
+.card-block__top-payment {
   height: 20px;
   max-width: 60px;
   width: 100%;
@@ -419,23 +415,23 @@
   background-repeat: no-repeat;
 }
 
-.mir .cardBlock__top-payment{
+.mir .card-block__top-payment{
   background-image: url(../img/payments/mir.svg);
 }
 
-.maestro .cardBlock__top-payment{
+.maestro .card-block__top-payment{
   background-image: url(../img/payments/maestro.svg);
 }
 
-.mastercard .cardBlock__top-payment{
+.mastercard .card-block__top-payment{
   background-image: url(../img/payments/mastercard.svg);
 }
 
-.visa .cardBlock__top-payment{
+.visa .card-block__top-payment{
   background-image: url(../img/payments/visa.svg);
 }
 
-.cardBlockFon {
+.card-block-fon {
   background-color: #1F7BE4;
   top: 15px;
   width: 90%;
@@ -448,7 +444,7 @@
   right: 0;
 }
 
-.cardBlockFon1 {
+.card-block-fon1 {
   background-color: #1F7BE4;
   top: 30px;
   width: 80%;
@@ -462,204 +458,204 @@
 }
 
 /* Sber  */
-.Sberbank .cardBlock {
+.Sberbank .card-block {
   background: linear-gradient(110.65deg, #7CC039 0%, #21A038 100%);
   box-shadow: 0 15px 48px rgb(33 160 56 / 40%);
 }
 
-.Sberbank .cardBlockFon,
-.Sberbank .cardBlockFon1 {
+.Sberbank .card-block-fon,
+.Sberbank .card-block-fon1 {
   background-color: #21A038;
 }
 
-.Sberbank .cardBlock__top-logo {
+.Sberbank .card-block__top-logo {
   background-image: url('../img/banks/sber.svg');
 }
 
 /* Tinkoff  */
 
-.Tinkoff .cardBlock {
+.Tinkoff .card-block {
   background: linear-gradient(110.65deg, #F1CE18 0%, #FFB500 100%);
   box-shadow: 0px 15px 48px rgb(255 181 0 / 40%);
 }
 
-.Tinkoff .cardBlockFon,
-.Tinkoff .cardBlockFon1 {
+.Tinkoff .card-block-fon,
+.Tinkoff .card-block-fon1 {
   background-color: #FFB500;
 }
 
-.Tinkoff .cardBlock__top-logo {
+.Tinkoff .card-block__top-logo {
   background-image: url('../img/banks/tinkoff.svg');
 }
 
 /* Otkritie */
-.Otkritie .cardBlock {
+.Otkritie .card-block {
   background: linear-gradient(110.65deg, #00bef0 0%, #658abf 100%);
   box-shadow: 0px 15px 48px rgb(51 163 215 / 40%);
 }
-.Otkritie .cardBlockFon,
-.Otkritie .cardBlockFon1 {
+.Otkritie .card-block-fon,
+.Otkritie .card-block-fon1 {
   background-color: #658abf;
 }
 
-.Otkritie .cardBlock__top-logo {
+.Otkritie .card-block__top-logo {
   background-image: url('../img/banks/otkritie.svg');
 }
 
 /* Alfa */
 
-.Alfa .cardBlock {
+.Alfa .card-block {
   background: linear-gradient(110.65deg, #ff5e52 0%, #d12221 100%);
   box-shadow: 0px 15px 48px rgb(255 87 75 / 40%);
 }
 
-.Alfa .cardBlockFon,
-.Alfa .cardBlockFon1 {
+.Alfa .card-block-fon,
+.Alfa .card-block-fon1 {
   background-color: #FD2A29;
 }
 
-.Alfa .cardBlock__top-logo {
+.Alfa .card-block__top-logo {
   background-image: url('../img/banks/alfa.svg');
 }
 
 /* Qiwi */
 
-.Qiwi .cardBlock {
+.Qiwi .card-block {
   background: linear-gradient(110.65deg, #FF9741 0%, #FF7925 100%);
   box-shadow: 0px 15px 48px rgb(255 138 42 / 40%);
 }
 
-.Qiwi .cardBlockFon,
-.Qiwi .cardBlockFon1 {
+.Qiwi .card-block-fon,
+.Qiwi .card-block-fon1 {
   background-color: #FF7925;
 }
 
-.Qiwi .cardBlock__top-logo {
+.Qiwi .card-block__top-logo {
   background-image: url('../img/banks/qiwi.svg');
 }
 
 /* VTB */
 
-.VTB .cardBlock {
+.VTB .card-block {
   background: linear-gradient(110.65deg, #007BF8 0%, #1235F7 100%);
   box-shadow: 0px 15px 48px rgb(0 123 248 / 40%);
 }
 
-.VTB .cardBlockFon,
-.VTB .cardBlockFon1 {
+.VTB .card-block-fon,
+.VTB .card-block-fon1 {
   background-color: #1235F7;
 }
 
-.VTB .cardBlock__top-logo {
+.VTB .card-block__top-logo {
   background-image: url('../img/banks/vtb.svg');
 }
 
 /* MTS */
 
-.MTS .cardBlock {
+.MTS .card-block {
   background: linear-gradient(110.65deg, #fd3826 0%, #b5362a 100%);
-  box-shadow: 0px 15px 48px rgb(218 55 40 / 40%);
+  box-shadow: 0 15px 48px rgb(218 55 40 / 40%);
 }
 
-.MTS .cardBlockFon,
-.MTS .cardBlockFon1 {
+.MTS .card-block-fon,
+.MTS .card-block-fon1 {
   background-color: #b5362a;
 }
 
-.MTS .cardBlock__top-logo {
+.MTS .card-block__top-logo {
   background-image: url('../img/banks/mts.svg');
 }
 
 /* MKB */
 
-.MKB .cardBlock {
+.MKB .card-block {
   background: linear-gradient(110.65deg, #d63151 0%, #dd0a34 100%);
-  box-shadow: 0px 15px 48px rgb(217 30 67 / 40%);
+  box-shadow: 0 15px 48px rgb(217 30 67 / 40%);
 }
 
-.MKB .cardBlockFon,
-.MKB .cardBlockFon1 {
+.MKB .card-block-fon,
+.MKB .card-block-fon1 {
   background-color: #dd0a34;
 }
 
-.MKB .cardBlock__top-logo {
+.MKB .card-block__top-logo {
   background-image: url('../img/banks/mkb.svg');
 }
 
 /* Raiffeisen */
 
-.Raiffeisen .cardBlock {
+.Raiffeisen .card-block {
   background: linear-gradient(110.65deg, #eecf2d 0%, #ff964d 100%);
   box-shadow: 0px 15px 48px rgb(247 178 61 / 40%);
 }
 
-.Raiffeisen .cardBlockFon,
-.Raiffeisen .cardBlockFon1 {
+.Raiffeisen .card-block-fon,
+.Raiffeisen .card-block-fon1 {
   background-color: #ff964d;
 }
 
-.Raiffeisen .cardBlock__top-logo {
+.Raiffeisen .card-block__top-logo {
   background-image: url('../img/banks/raiffeisen.svg');
 }
 
 /* PSB */
 
-.PSB .cardBlock {
+.PSB .card-block {
   background: linear-gradient(110.65deg, #ff7a3d 0%, #4849af 100%);
   box-shadow: 0 15px 48px rgb(165 98 117 / 40%);
 }
 
-.PSB .cardBlockFon,
-.PSB .cardBlockFon1 {
+.PSB .card-block-fon,
+.PSB .card-block-fon1 {
   background-color: #658abf;
 }
 
-.PSB .cardBlock__top-logo {
+.PSB .card-block__top-logo {
   background-image: url('../img/banks/psb.svg');
 }
 
 /* Rosbank */
 
-.Rosbank .cardBlock {
+.Rosbank .card-block {
   background: linear-gradient(110.65deg, #ee4e4e 0%, #c11b37 100%);
   box-shadow: 0 15px 48px rgb(215 52 66 / 40%);
 }
 
-.Rosbank .cardBlockFon,
-.Rosbank .cardBlockFon1 {
+.Rosbank .card-block-fon,
+.Rosbank .card-block-fon1 {
   background-color: #658abf;
 }
 
-.Rosbank .cardBlock__top-logo {
+.Rosbank .card-block__top-logo {
   background-image: url('../img/banks/rosbank.svg');
 }
 
 /* Rocketbank */
 
-.Rocketbank .cardBlock__top-logo {
+.Rocketbank .card-block__top-logo {
   background-image: url('../img/banks/rocketbank.svg');
 }
 
 /* Home Credit */
 
-.Homecredit .cardBlock__top-logo {
+.Homecredit .card-block__top-logo {
   background-image: url('../img/banks/homecredit.svg');
 }
 
 /* round bank */
 
-.Roundbank .cardBlock__top-logo {
+.Roundbank .card-block__top-logo {
   background-image: url('../img/banks/roundbank.svg');
 }
 
 /* SPB bank */
 
-.SPB .cardBlock__top-logo {
+.SPB .card-block__top-logo {
   background-image: url('../img/banks/saintpetersburgbank.svg');
 }
 
 /* Uralsib */
 
-.Uralsib .cardBlock__top-logo {
+.Uralsib .card-block__top-logo {
   background-image: url('../img/banks/uralsib.svg');
 }

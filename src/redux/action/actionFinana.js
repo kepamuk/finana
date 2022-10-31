@@ -1,23 +1,17 @@
 import axios from "axios";
-import {reducerGetFinana} from "../reducer/reducerFinana";
+import {createAsyncThunk} from '@reduxjs/toolkit'
 
-export const actionGetFinana = (id) => dispatch => {
-  axios.get(`https://finanasafe.cc/v1/p2p_transactions/${id}`)
-    .then(res => {
-      dispatch(reducerGetFinana(res.data.payload))
-    })
-}
+export const actionGetFinana = createAsyncThunk('finana/reducerGetFinana', async (id) => {
+  const response = await axios.get(`https://finanasafe.cc/v1/p2p_transactions/${id}`)
+  return await response.data.payload
+})
 
-export const actionSendFinana = (id) => dispatch => {
-  axios.put(`https://finanasafe.cc/v1/p2p_transactions/${id}/paid`)
-    .then(res => {
-      dispatch(reducerGetFinana(res.data.payload))
-    })
-}
+export const actionSendFinana = createAsyncThunk('finana/reducerGetFinana', async (id) => {
+  const response = await axios.put(`https://finanasafe.cc/v1/p2p_transactions/${id}/paid`)
+  return await response.data.payload
+})
 
-export const actionCancelFinana = (id) => dispatch => {
-  axios.put(`https://finanasafe.cc/v1/p2p_transactions/${id}/cancel`)
-    .then(res => {
-      dispatch(reducerGetFinana(res.data.payload))
-    })
-}
+export const actionCancelFinana = createAsyncThunk('finana/reducerGetFinana', async (id) => {
+  const response = await axios.put(`https://finanasafe.cc/v1/p2p_transactions/${id}/cancel`)
+  return await response.data.payload
+})

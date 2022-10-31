@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {actionSendFinana} from "../action/actionFinana";
+import {actionGetFinana} from "../action/actionFinana";
 
 const initialState = {
   finana: {},
@@ -9,13 +9,12 @@ const initialState = {
 export const finanaSlice = createSlice({
   name: 'finana',
   initialState,
-  reducers: {
-    reducerGetFinana: (state, {payload}) => {
-      state.finana = payload;
-    }
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(actionGetFinana.fulfilled, (state, action) => {
+      state.finana = action.payload
+    })
   },
 });
-
-export const { reducerGetFinana } = finanaSlice.actions;
 
 export default finanaSlice.reducer;

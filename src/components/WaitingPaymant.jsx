@@ -111,22 +111,22 @@ export const WaitingPayment = () => {
   }
 
   return (
-    <div className='WaitingPaymentWrap'>
-      {timer >= 0 && (finana.state === 'waiting_payment' || finana.state === 'paid') && <div className='WaitingPayment'>
-        <div className="WaitingPayment__title">
+    <div className='waiting-payment-wrap'>
+      {timer >= 0 && (finana.state === 'waiting_payment' || finana.state === 'paid') && <div className='waiting-payment'>
+        <div className="waiting-payment__title">
           <img src={logo} alt=""/>
           <img onClick={() => handleModal(true)} src={error} alt=""/>
         </div>
         <div className="card">
           <div className="card__title">Запрос успешно принят</div>
           <div className="card__info">Сделайте перевод суммы на указанную карту</div>
-          <div className={`cardBlockWrap ${bankNames[finana.resipient_card.bank_name]} ${finana.resipient_card.brand}`}>
-            <div className='cardBlock'>
-              <div className="cardBlock__top">
-                <div className="cardBlock__top-logo"/>
-                <div className="cardBlock__top-payment"/>
+          <div className={`card-block-wrap ${bankNames[finana.resipient_card.bank_name]} ${finana.resipient_card.brand}`}>
+            <div className='card-block'>
+              <div className="card-block__top">
+                <div className="card-block__top-logo"/>
+                <div className="card-block__top-payment"/>
               </div>
-              <div className="cardBlock__bottom">
+              <div className="card-block__bottom">
                 <div className="number">
                   <div className="number__title">
                     Номер карты для перевода
@@ -167,23 +167,23 @@ export const WaitingPayment = () => {
                 </div>
               </div>
             </div>
-            <div className="cardBlockFon"/>
-            <div className="cardBlockFon1"/>
+            <div className="card-block-fon"/>
+            <div className="card-block-fon1"/>
           </div>
-          <div className="cardBottom">
-            <div className="cardBottom__timer">
+          <div className="card-bottom">
+            <div className="card-bottom__timer">
               {renderTimer(timer)}
             </div>
-            {finana.state !== 'paid' && <div className="cardBottom__wrap">
-              <div className="cardBottom__info">
+            {finana.state !== 'paid' && <div className="card-bottom__wrap">
+              <div className="card-bottom__info">
                 Переводите строго точную сумму одним переводом!
               </div>
-              <div className="cardBottom__send">
+              <div className="card-bottom__send">
                 <span>Если вы отправили средства - нажмите</span>
                 <span> Я отправил</span>
               </div>
               <button
-                className="cardBottom__btn"
+                className="card-bottom__btn"
                 onClick={() => handleSend()}
               >Я отправил
               </button>
@@ -199,20 +199,20 @@ export const WaitingPayment = () => {
           </div>
         </div>
         {finana.state !== 'paid' &&
-          <div className="cardInfo">Переводите точную сумму ОДНИМ ПЕРЕВОДОМ, или он не будет зачислен!!!</div>}
+          <div className="card-info">Переводите точную сумму ОДНИМ ПЕРЕВОДОМ, или он не будет зачислен!!!</div>}
       </div>}
       {timer < 0 && (finana.state === 'waiting_payment' || finana.state === 'paid') &&
-        <div className='WaitingPaymentTimeOut'>
-          <div className="WaitingPaymentTimeOut__title">
+        <div className='waiting-payment-timeout'>
+          <div className="waiting-payment-timeout__title">
             <img src={logo} alt=""/>
           </div>
-          <div className="WaitingPaymentTimeOut__content">
+          <div className="waiting-payment-timeout__content">
             <img src={error} alt=""/>
             <h2>Платеж не был получен</h2>
             <div>Истекло время оплаты</div>
             <button>Вернуться на сайт магазина</button>
           </div>
-          <div className="WaitingPaymentTimeOut__bottom">Я перевёл, но платёж не прошёл!</div>
+          <div className="waiting-payment-timeout__bottom">Я перевёл, но платёж не прошёл!</div>
         </div>
       }
 
